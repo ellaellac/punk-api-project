@@ -1,3 +1,39 @@
+@use "../../assets/variables" as *;
 .beerCard {
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  height: 700px;
   border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beerImage {
+  width: auto;
+  height: 300px;
+}
+
+.beerName,
+.beerText {
+  font-family: $text-font;
+}
+
+.beerName,
+.beerHeading {
+  font-weight: 700;
+}
+
+.beerName {
+  font-size: $name-size;
+}
+
+.beerHeading {
+  font-size: $heading-size;
+}
+
+.beerText {
+  font-size: $text-size;
+  line-height: 16px;
 }

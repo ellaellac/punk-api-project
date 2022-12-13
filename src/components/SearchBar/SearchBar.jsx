@@ -1,10 +1,10 @@
 import "./SearchBar.scss";
 
-const SearchBox = ({ label, searchTerm, handleInput }) => {
+const SearchBox = ({ label, handleInput }) => {
   return (
     <form className="Search-box">
       <label htmlFor={label}>{label} : </label>
-      <input onInput={handleInput} value={searchTerm} type="text" />
+      <input onInput={handleInput} type="text" />
     </form>
   );
 };

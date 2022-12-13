@@ -1,7 +1,7 @@
 import "./App.scss";
 // import NavBar from "./containers/NavBar/NavBar";
 import CardList from "./containers/CardList/CardList";
-import SearchBar from "./components/SearchBar/SearchBar";
+import NavBar from "./containers/NavBar/NavBar";
 import { useState } from "react";
 
 import beers from "./data/beers";
@@ -12,25 +12,11 @@ const App = () => {
   //Name Search
   const [serachTerm, setSearchTerm] = useState("");
 
-  const handleInput = (event) => {
-    const userInput = event.target.value.toLowerCase();
-    return setSearchTerm(userInput);
-  };
-
-  const filteredBeerCards = beers.filter((beer) => {
-    const lowerCaseName = beer.name.toLowerCase();
-    return lowerCaseName.includes(serachTerm);
-  });
-
   return (
     <>
       <p> Testing </p>
-      <SearchBar
-        label="Search Name"
-        serachTerm={serachTerm}
-        handleInput={handleInput}
-      />
-      <CardList beersArr={filteredBeerCards} />
+      <NavBar setSearchTerm={setSearchTerm} />
+      <CardList beers={beers} serachTerm={serachTerm} />
     </>
   );
 };
