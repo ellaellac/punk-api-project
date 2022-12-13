@@ -11,6 +11,7 @@ const CardList = ({ beers, searchTerm }) => {
     return (
       <BeerCard
         key={beer.id}
+        tagline={beer.tagline}
         image={beer.image_url}
         name={beer.name}
         abv={beer.abv}

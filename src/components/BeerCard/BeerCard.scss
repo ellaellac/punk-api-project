@@ -1,39 +1,47 @@
 @use "../../assets/variables" as *;
+
+* {
+  margin: 0;
+}
+
 .beerCard {
-  margin: 10px;
+  margin: 20px;
   padding: 10px;
-  width: 350px;
-  height: 700px;
-  border: 2px solid black;
+  width: 360px;
+  height: 620px;
+  border: 5px solid black;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: $colour-secondary;
 }
 
 .beerImage {
   width: auto;
-  height: 300px;
+  height: 250px;
 }
 
 .beerName,
-.beerText {
-  font-family: $text-font;
-}
-
-.beerName,
+.beerText,
 .beerHeading {
-  font-weight: 700;
+  font-family: $text-font;
+  margin: 5px;
 }
 
 .beerName {
+  margin-top: 20px;
   font-size: $name-size;
+  font-weight: 700;
+  color: $colour-tertiary;
 }
 
 .beerHeading {
   font-size: $heading-size;
+  font-weight: 600;
 }
 
 .beerText {
   font-size: $text-size;
-  line-height: 16px;
+  line-height: 36px;
 }
