@@ -1,10 +1,10 @@
 import "./CardList.scss";
 import BeerCard from "../../components/BeerCard/BeerCard";
 
-const CardList = ({ beers, serachTerm }) => {
+const CardList = ({ beers, searchTerm }) => {
   const filteredBeerCards = beers.filter((beer) => {
     const lowerCaseName = beer.name.toLowerCase();
-    return lowerCaseName.includes(serachTerm);
+    return lowerCaseName.includes(searchTerm);
   });
 
   const beerCardJsx = filteredBeerCards.map((beer) => {

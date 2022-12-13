@@ -10,13 +10,13 @@ console.log(beers);
 
 const App = () => {
   //Name Search
-  const [serachTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <>
       <p> Testing </p>
-      <NavBar setSearchTerm={setSearchTerm} />
-      <CardList beers={beers} serachTerm={serachTerm} />
+      <NavBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <CardList beers={beers} searchTerm={searchTerm} />
     </>
   );
 };
