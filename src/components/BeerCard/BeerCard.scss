@@ -10,38 +10,60 @@
   width: 360px;
   height: 620px;
   border: 5px solid black;
-  border-radius: 15px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: $colour-secondary;
 }
 
-.beerImage {
+.beerCard__image {
   width: auto;
   height: 250px;
 }
 
-.beerName,
-.beerText,
-.beerHeading {
+.beerCard__name,
+.beerCard__text,
+.beerCard__heading {
   font-family: $text-font;
   margin: 5px;
 }
 
-.beerName {
+.beerCard__name {
   margin-top: 20px;
   font-size: $name-size;
   font-weight: 700;
   color: $colour-tertiary;
 }
 
-.beerHeading {
+.beerCard__heading {
   font-size: $heading-size;
   font-weight: 600;
 }
 
-.beerText {
+.beerCard__text {
   font-size: $text-size;
   line-height: 36px;
+  width: 100%;
+}
+
+.beerCard__info {
+  height: 600px;
+  width: 320px;
+  padding: 0px 20px;
+  border-radius: 15px;
+  overflow: auto;
+  white-space: pre-line;
+  background: rgba($colour-primary, 0.9);
+  position: absolute;
+  z-index: 1;
+}
+
+.beerCard__cross {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  left: 290px;
+  top: 20px;
 }

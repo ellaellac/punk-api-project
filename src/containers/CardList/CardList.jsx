@@ -17,6 +17,8 @@ const CardList = ({ beers, searchTerm }) => {
         abv={beer.abv}
         ph={beer.ph}
         year={beer.first_brewed}
+        description={beer.description}
+        food={beer.food_pairing}
       />
     );
   });
