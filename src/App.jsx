@@ -1,29 +1,36 @@
 import "./App.scss";
+// import NavBar from "./containers/NavBar/NavBar";
+import CardList from "./containers/CardList/CardList";
+import SearchBar from "./components/SearchBar/SearchBar";
+import { useState } from "react";
+
 import beers from "./data/beers";
-import BeerCard from "./components/BeerCard/BeerCard";
 
 console.log(beers);
 
 const App = () => {
-  const beerCardJsx = beers.map(
-    ({ id, name, image_url, abv, ph, first_brewed }) => {
-      return (
-        <BeerCard
-          key={id}
-          name={name}
-          image={image_url}
-          abv={abv}
-          ph={ph}
-          year={first_brewed}
-        />
-      );
-    }
-  );
+  //Name Search
+  const [serachTerm, setSearchTerm] = useState("");
+
+  const handleInput = (event) => {
+    const userInput = event.target.value.toLowerCase();
+    return setSearchTerm(userInput);
+  };
+
+  const filteredBeerCards = beers.filter((beer) => {
+    const lowerCaseName = beer.name.toLowerCase();
+    return lowerCaseName.includes(serachTerm);
+  });
 
   return (
     <>
       <p> Testing </p>
-      <div className="cardList">{beerCardJsx}</div>;
+      <SearchBar
+        label="Search Name"
+        serachTerm={serachTerm}
+        handleInput={handleInput}
+      />
+      <CardList beersArr={filteredBeerCards} />
     </>
   );
 };
