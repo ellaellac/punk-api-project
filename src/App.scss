@@ -1,7 +1,17 @@
 @use "./assets/variables" as *;
 
+.app {
+  margin: 0;
+  background-image: url("./assets/bubbles.jpg");
+  background-size: cover;
+}
 .header {
-  margin: 30px;
+  padding: 20px 0 0 30px;
+  font-size: $name-size;
   font-family: $text-font;
-  font-family: $name-size;
+  display: flex;
+  align-items: flex-end;
+  &__img {
+    height: 100px;
+  }
 }

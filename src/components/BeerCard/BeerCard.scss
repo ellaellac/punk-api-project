@@ -2,6 +2,7 @@
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 .beerCard {
@@ -16,54 +17,103 @@
   justify-content: center;
   align-items: center;
   background-color: $colour-secondary;
+
+  &__image {
+    width: auto;
+    height: 250px;
+  }
+
+  &__name,
+  &__text,
+  &__heading {
+    font-family: $text-font;
+    margin: 5px;
+  }
+
+  &__name {
+    margin-top: 20px;
+    font-size: $name-size;
+    font-weight: 700;
+    color: $colour-tertiary;
+  }
+
+  &__heading {
+    font-size: $heading-size;
+    font-weight: 600;
+  }
+
+  &__text {
+    font-size: $text-size;
+    line-height: 36px;
+    width: 100%;
+  }
+
+  &__info {
+    height: 600px;
+    width: 320px;
+    padding: 0px 20px;
+    border-radius: 15px;
+    overflow: auto;
+    white-space: pre-line;
+    background: rgba($colour-primary, 0.9);
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__cross {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    left: 290px;
+    top: 20px;
+    cursor: pointer;
+  }
 }
 
-.beerCard__image {
-  width: auto;
-  height: 250px;
-}
+@media screen and (max-width: 768px) {
+  .beerCard {
+    justify-content: flex-start;
+    height: auto;
 
-.beerCard__name,
-.beerCard__text,
-.beerCard__heading {
-  font-family: $text-font;
-  margin: 5px;
-}
+    &__image {
+      width: auto;
+      margin-top: 10px;
+      height: 200px;
+    }
 
-.beerCard__name {
-  margin-top: 20px;
-  font-size: $name-size;
-  font-weight: 700;
-  color: $colour-tertiary;
-}
+    &__name,
+    &__text,
+    &__heading {
+      font-family: $text-font;
+    }
 
-.beerCard__heading {
-  font-size: $heading-size;
-  font-weight: 600;
-}
+    &__name {
+      font-size: $name-size-small;
+      font-weight: 600;
+    }
 
-.beerCard__text {
-  font-size: $text-size;
-  line-height: 36px;
-  width: 100%;
-}
+    &__heading {
+      font-size: $heading-size-small;
+      font-weight: 500;
+    }
 
-.beerCard__info {
-  height: 600px;
-  width: 320px;
-  padding: 0px 20px;
-  border-radius: 15px;
-  overflow: auto;
-  white-space: pre-line;
-  background: rgba($colour-primary, 0.9);
-  position: absolute;
-  z-index: 1;
-}
+    &__text {
+      font-size: $text-size-small;
+      line-height: 26px;
+    }
 
-.beerCard__cross {
-  height: 25px;
-  width: 25px;
-  position: relative;
-  left: 290px;
-  top: 20px;
+    &__info {
+      height: 400px;
+      width: 180px;
+      padding: 0px 20px;
+    }
+
+    &__cross {
+      height: 20px;
+      width: 20px;
+      position: relative;
+      left: 160px;
+      top: 20px;
+    }
+  }
 }

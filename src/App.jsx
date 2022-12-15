@@ -2,6 +2,7 @@ import "./App.scss";
 // import NavBar from "./containers/NavBar/NavBar";
 import CardList from "./containers/CardList/CardList";
 import NavBar from "./containers/NavBar/NavBar";
+import BeerLogo from "./assets/beerlogo.png";
 import { useEffect, useState } from "react";
 
 const App = () => {
@@ -34,8 +35,11 @@ const App = () => {
   }, [filterABV, filterYear]);
 
   return (
-    <div>
-      <h1 className="header"> Our Beers </h1>
+    <div className="app">
+      <div className="header">
+        <img className="header__img" src={BeerLogo} alt="Beer Logo" />
+        <h1> Our Beers </h1>
+      </div>
       <NavBar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}

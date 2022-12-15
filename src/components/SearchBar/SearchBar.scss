@@ -10,7 +10,14 @@
     border-radius: 10px;
     padding-left: 10px;
     font-size: $heading-size;
-    width: 300px;
+    width: 60%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-box__input {
+    width: 90%;
     height: 100%;
   }
 }

@@ -1,8 +1,7 @@
 @use "../../assets/variables" as *;
 
 .button {
-  position: relative;
-  top: 10px;
+  margin-top: 10px;
   border: 1px solid black;
   border-radius: 20px;
   padding: 10px 20px;
@@ -12,4 +11,7 @@
   background-color: $colour-primary;
   box-shadow: 3px 3px rgb(68, 67, 67);
   cursor: pointer;
+  &:active {
+    transform: scale(0.95);
+  }
 }
