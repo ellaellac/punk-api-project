@@ -22,11 +22,11 @@ const NavBar = (props) => {
   return (
     <div className="navBar">
       <SearchBar
-        label="Search Name"
+        label="Search Beer"
         searchTerm={searchTerm}
         handleInput={handleInput}
       />
-      <div className="navBar__cardList">
+      <div className="navBar__filterList">
         <FilterList
           filterABV={filterABV}
           setFilterABV={setFilterABV}

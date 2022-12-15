@@ -1,15 +1,17 @@
+@use "../../assets/variables" as *;
 .navBar {
-  border: 2px solid blue;
+  border: 5px dashed black;
   margin: 30px;
   border-radius: 10px;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  background-color: $colour-secondary;
 }
 
-.navBar__cardList {
-  width: 50%;
+.navBar__filterList {
+  width: 60%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

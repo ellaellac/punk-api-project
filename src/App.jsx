@@ -34,7 +34,8 @@ const App = () => {
   }, [filterABV, filterYear]);
 
   return (
-    <>
+    <div>
+      <h1 className="header"> Our Beers </h1>
       <NavBar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
@@ -52,7 +53,7 @@ const App = () => {
           filterLowPh={filterLowPh}
         />
       )}
-    </>
+    </div>
   );
 };
 

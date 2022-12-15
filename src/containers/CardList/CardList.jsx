@@ -1,6 +1,5 @@
 import "./CardList.scss";
 import BeerCard from "../../components/BeerCard/BeerCard";
-import { useEffect } from "react";
 
 const CardList = ({ beers, searchTerm, filterLowPh }) => {
   console.log("here", beers, filterLowPh);

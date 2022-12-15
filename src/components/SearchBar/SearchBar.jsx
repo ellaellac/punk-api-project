@@ -8,6 +8,7 @@ const SearchBox = ({ label, searchTerm, handleInput }) => {
       </label>
       <input
         className="search-box__input"
+        placeholder="Beer's Name"
         onInput={handleInput}
         value={searchTerm}
         type="text"
