@@ -1,0 +1,16 @@
+.navBar {
+  border: 2px solid blue;
+  margin: 30px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navBar__cardList {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

@@ -1,6 +1,6 @@
 import "./NavBar.scss";
 import SearchBar from "../../components/SearchBar/SearchBar";
-import Filter from "../../components/Filter/Filter";
+import FilterList from "../FilterList/FilterList";
 
 const NavBar = (props) => {
   const {
@@ -10,8 +10,8 @@ const NavBar = (props) => {
     setFilterABV,
     filterYear,
     setFilterYear,
-    filterHighPh,
-    setFilterHighPh,
+    filterLowPh,
+    setFilterLowPh,
   } = props;
 
   const handleInput = (event) => {
@@ -20,20 +20,22 @@ const NavBar = (props) => {
   };
 
   return (
-    <div>
+    <div className="navBar">
       <SearchBar
         label="Search Name"
         searchTerm={searchTerm}
         handleInput={handleInput}
       />
-      <Filter
-        filterABV={filterABV}
-        setFilterABV={setFilterABV}
-        filterYear={filterYear}
-        setFilterYear={setFilterYear}
-        filterHighPh={filterHighPh}
-        setFilterHighPh={setFilterHighPh}
-      />
+      <div className="navBar__cardList">
+        <FilterList
+          filterABV={filterABV}
+          setFilterABV={setFilterABV}
+          filterYear={filterYear}
+          setFilterYear={setFilterYear}
+          filterLowPh={filterLowPh}
+          setFilterLowPh={setFilterLowPh}
+        />
+      </div>
     </div>
   );
 };

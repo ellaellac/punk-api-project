@@ -1,3 +1,13 @@
+@use "../../assets/variables" as *;
+
 .filter {
   display: flex;
+  &__title {
+    font-family: $text-font;
+    font-size: $heading-size;
+  }
+  &__box {
+    margin-left: 7px;
+    cursor: pointer;
+  }
 }

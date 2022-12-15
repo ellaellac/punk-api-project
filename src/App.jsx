@@ -4,13 +4,11 @@ import CardList from "./containers/CardList/CardList";
 import NavBar from "./containers/NavBar/NavBar";
 import { useEffect, useState } from "react";
 
-// import beers from "./data/beers";
-
 const App = () => {
   //Filter
   const [filterABV, setFilterABV] = useState(false);
   const [filterYear, setFilterYear] = useState(false);
-  const [filterHighPh, setFilterHighPh] = useState(false);
+  const [filterLowPh, setFilterLowPh] = useState(false);
 
   //Name Search
   const [searchTerm, setSearchTerm] = useState("");
@@ -30,13 +28,13 @@ const App = () => {
     setBeers(data);
   };
 
+  //useEffect
   useEffect(() => {
     getAllBeers(filterABV, filterYear);
   }, [filterABV, filterYear]);
 
   return (
     <>
-      <p> Testing </p>
       <NavBar
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
@@ -44,10 +42,16 @@ const App = () => {
         setFilterABV={setFilterABV}
         filterYear={filterYear}
         setFilterYear={setFilterYear}
-        filterHighPh={filterHighPh}
-        setFilterHighPh={setFilterHighPh}
+        filterLowPh={filterLowPh}
+        setFilterLowPh={setFilterLowPh}
       />
-      {beers && <CardList beers={beers} searchTerm={searchTerm} />}
+      {beers && (
+        <CardList
+          beers={beers}
+          searchTerm={searchTerm}
+          filterLowPh={filterLowPh}
+        />
+      )}
     </>
   );
 };

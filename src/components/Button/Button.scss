@@ -2,7 +2,7 @@
 
 .button {
   position: relative;
-  top: 15px;
+  top: 10px;
   border: 1px solid black;
   border-radius: 20px;
   padding: 10px 20px;
@@ -10,4 +10,6 @@
   font-family: $text-font;
   font-size: $heading-size;
   background-color: $colour-primary;
+  box-shadow: 3px 3px rgb(68, 67, 67);
+  cursor: pointer;
 }

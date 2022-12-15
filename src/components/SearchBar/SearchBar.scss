@@ -1,0 +1,16 @@
+@use "../../assets/variables" as *;
+
+.search-box {
+  font-family: $text-font;
+  &__title {
+    font-size: $heading-size;
+  }
+  &__input {
+    border: 2px solid $colour-tertiary;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: $heading-size;
+    width: 300px;
+    height: 100%;
+  }
+}
