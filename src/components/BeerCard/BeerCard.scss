@@ -55,7 +55,7 @@
     border-radius: 15px;
     overflow: auto;
     white-space: pre-line;
-    background: rgba($colour-primary, 0.9);
+    background: rgba($colour-primary, 0.95);
     position: absolute;
     z-index: 1;
   }
@@ -73,6 +73,7 @@
 @media screen and (max-width: 768px) {
   .beerCard {
     justify-content: flex-start;
+    width: 300px;
     height: auto;
 
     &__image {
@@ -104,7 +105,7 @@
 
     &__info {
       height: 400px;
-      width: 180px;
+      width: 250px;
       padding: 0px 20px;
     }
 
@@ -112,7 +113,7 @@
       height: 20px;
       width: 20px;
       position: relative;
-      left: 160px;
+      left: 230px;
       top: 20px;
     }
   }
