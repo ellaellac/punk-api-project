@@ -2,16 +2,17 @@ import "./CardList.scss";
 import BeerCard from "../../components/BeerCard/BeerCard";
 
 const CardList = ({ beers, searchTerm, filterLowPh }) => {
-  console.log("here", beers, filterLowPh);
   //Filter Low pH
   if (filterLowPh) {
-    beers = beers.filter((beer) => beer.ph < 4);
+    beers = beers.filter((beer) => beer.ph < 4 && beer.ph != null);
   }
   //Filter Beers by Name
-  const filteredBeerCards = beers.filter((beer) => {
-    const lowerCaseName = beer.name.toLowerCase();
-    return lowerCaseName.includes(searchTerm);
-  });
+  const filteredBeerCards = beers
+    .filter((beer) => {
+      const lowerCaseName = beer.name.toLowerCase();
+      return lowerCaseName.includes(searchTerm);
+    })
+    .slice(0, 25);
 
   const beerCardJsx = filteredBeerCards.map((beer) => {
     return (

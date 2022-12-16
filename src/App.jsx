@@ -17,16 +17,21 @@ const App = () => {
   const [beers, setBeers] = useState();
 
   const getAllBeers = async (filterABV, filterYear) => {
-    let url = "https://api.punkapi.com/v2/beers?";
-    if (filterABV) {
-      url += "abv_gt=6&";
+    let allBeersArr = [];
+    for (let i = 1; i < 6; i++) {
+      let url = `https://api.punkapi.com/v2/beers?page=${i}&per_page=80&`;
+      if (filterABV) {
+        url += "abv_gt=6&";
+      }
+      if (filterYear) {
+        url += "brewed_before=01-2010&";
+      }
+      const response = await fetch(url);
+      const data = await response.json();
+      allBeersArr = allBeersArr.concat(data);
     }
-    if (filterYear) {
-      url += "brewed_before=01-2010&";
-    }
-    const response = await fetch(url);
-    const data = await response.json();
-    setBeers(data);
+    console.log(allBeersArr);
+    setBeers(allBeersArr);
   };
 
   //useEffect
