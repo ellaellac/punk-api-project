@@ -19,7 +19,7 @@ const App = () => {
   const getAllBeers = async (filterABV, filterYear) => {
     let allBeersArr = [];
     for (let i = 1; i < 6; i++) {
-      let url = `https://api.punkapi.com/v2/beers?page=${i}&per_page=80&`;
+      let url = `https://punkapi.online/v3/beers?page=${i}&per_page=80&`;
       if (filterABV) {
         url += "abv_gt=6&";
       }

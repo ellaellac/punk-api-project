@@ -15,11 +15,13 @@ const CardList = ({ beers, searchTerm, filterLowPh }) => {
     .slice(0, 25);
 
   const beerCardJsx = filteredBeerCards.map((beer) => {
+    const beerIdPadded = String(beer.id).padStart(3, '0');
+    const imageUrl = `https://punkapi.online/v3/images/${beerIdPadded}.png`;
     return (
       <BeerCard
         key={beer.id}
         tagline={beer.tagline}
-        image={beer.image_url}
+        image={imageUrl}
         name={beer.name}
         abv={beer.abv}
         ph={beer.ph}
